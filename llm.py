@@ -1,4 +1,3 @@
-
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import hashlib
@@ -58,3 +57,8 @@ print('Text hash: ', text_hash)
 small_hash = text_hash % 1000000000
 print('small hash: ', small_hash)
 print('Atmospheric noise:', atmospheric_value)
+
+sum = small_hash + atmospheric_value
+xor = small_hash ^ atmospheric_value
+print('sum: ', sum)
+print('xor: ', xor)
