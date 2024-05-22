@@ -2,6 +2,7 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import hashlib
+import requests
 
 # Specify the model name from Hugging Face model hub
 model_name = "openai-community/gpt2"
@@ -11,7 +12,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
 # Encode input text
-input_text = "This is a "
+input_text = "This is a"
 input_ids = tokenizer.encode(input_text, return_tensors="pt")
 
 # Create attention mask
@@ -35,7 +36,25 @@ outputs = model.generate(
 generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
 hash_object = hashlib.sha256(generated_text.encode())
 hex_dig = hash_object.hexdigest()
-hash_value = int(hex_dig, 16)  # Convert the hexadecimal digest to an integer
+text_hash = int(hex_dig, 16)  # Convert the hexadecimal digest to an integer
+
+# Random.org atmospheric noise
+API_KEY = '0f45c68a-3097-4388-875a-29ba60d6744a'
+
+def generate_atmosphere():
+    url = f'https://www.random.org/integers/?num=1&min=1&max=100000000&col=1&base=10&format=plain&rnd=new&apiKey={API_KEY}'
+    response = requests.get(url)
+    if response.status_code == 200:
+        return int(response.text.strip())
+    else:
+        print('Error:', response.status_code)
+        return None
+
+# Generate a random number
+atmospheric_value = generate_atmosphere()
 
 print(generated_text)
-print(hash_value)
+print('Text hash: ', text_hash)
+small_hash = text_hash % 1000000000
+print('small hash: ', small_hash)
+print('Atmospheric noise:', atmospheric_value)
