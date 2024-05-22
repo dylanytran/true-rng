@@ -10,7 +10,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
 # Encode input text
-input_text = "Sebastian you german little bitch,"
+input_text = "Hey Seb, I heard you like them young"
 input_ids = tokenizer.encode(input_text, return_tensors="pt")
 
 # Create attention mask
