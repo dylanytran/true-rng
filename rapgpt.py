@@ -1,17 +1,16 @@
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-import hashlib
 
 # Specify the model name from Hugging Face model hub
-model_name = "openai-community/gpt2"
+model_name = "dzionek/distilgpt2-rap"
 
 # Load the tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
 # Encode input text
-input_text = "It's morbin time"
+input_text = "Sebastian you german little bitch,"
 input_ids = tokenizer.encode(input_text, return_tensors="pt")
 
 # Create attention mask
@@ -33,9 +32,5 @@ outputs = model.generate(
 
 # Decode the generated text
 generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-hash_object = hashlib.sha256(generated_text.encode())
-hex_dig = hash_object.hexdigest()
-hash_value = int(hex_dig, 16)  # Convert the hexadecimal digest to an integer
 
 print(generated_text)
-print(hash_value)
