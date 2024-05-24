@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   useEffect(() => {
-    document.title = "Dylan Tran";
+    document.title = "True RNG";
   }, []);
   return (
     <div className="App">

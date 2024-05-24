@@ -62,6 +62,9 @@ def get_atm_noise():
 
 
 def gen_rand(request, min, max):
+    if min > max:
+        return JsonResponse({'error': 'Min value cannot be greater than max value'})
+    
     # random number from GPT
     generated_text = gen_text("This is a")
     text_hash = hash(generated_text)
