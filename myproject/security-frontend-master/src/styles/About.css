@@ -1,0 +1,53 @@
+body {
+  background-color: #ffffff;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+p {
+  font-size: 18px;
+}
+
+.example {
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.dev-title {
+    padding-top: 60px;
+}
+
+.developers {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dev {
+    padding: 40px;
+}
+
+.jad-pic {
+  height: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #b1ac91;
+  box-sizing: content-box;
+}
+
+.dylan-pic {
+    height: 200px;
+    border-radius: 100px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #b1ac91;
+    box-sizing: content-box;
+  }
