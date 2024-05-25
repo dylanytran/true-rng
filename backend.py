@@ -68,11 +68,3 @@ def rand_gen(min, max):
     rang = max - min + 1
     final_val = (xor % rang) + min
     return final_val
-
-print('gimme min')
-min = int(input())
-
-print('gimme max')
-max = int(input())
-
-print(rand_gen(min, max))
