@@ -9,6 +9,14 @@ p {
   font-size: 18px;
 }
 
+.highlight {
+  font-weight: bold;
+}
+
+.highlight:hover {
+  color: rgb(255, 65, 150);
+}
+
 .example {
   color: rgb(96, 96, 96);
   font-size: 14px;

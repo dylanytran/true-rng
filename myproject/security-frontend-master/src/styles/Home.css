@@ -33,17 +33,18 @@ input[type="number"] {
 
 button {
   padding: 10px 20px;
-  background-color: #326cff;
+  background: linear-gradient(to bottom, #328eff, #49a4ff);
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 16px;
+  font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 button:hover {
-  background-color: #6490ff;
+  background: linear-gradient(to bottom, #326cff, #2a73e8);
 }
 
 .number {
