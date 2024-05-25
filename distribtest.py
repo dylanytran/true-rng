@@ -19,6 +19,6 @@ def chi_square_test(data, num_bins=10):
     return chi2, p_value
 
 # Example usage
-random_numbers = generate_random_numbers(1000, 1, 10)
+random_numbers = generate_random_numbers(500, 1, 10)
 chi2, p_value = chi_square_test(random_numbers)
 print(f"Chi-square statistic: {chi2}, p-value: {p_value}")

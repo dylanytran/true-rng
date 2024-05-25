@@ -39,7 +39,7 @@ def classify_poker_hands(hands):
     return classifications
 
 # Example usage
-poker_hands = generate_poker_hands(1000)
+poker_hands = generate_poker_hands(100)
 classification_results = classify_poker_hands(poker_hands)
 print("Poker hand classification results:")
 for hand_type, count in classification_results.items():

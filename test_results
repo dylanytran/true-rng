@@ -1,0 +1,88 @@
+1. Distribution Test (Chi-square Goodness-of-Fit Test)
+The Chi-square goodness-of-fit test compares the observed distribution of your generated numbers to the expected uniform distribution. The test produces two key values: the Chi-square statistic and the p-value.
+
+Chi-square statistic (χ²): Measures the discrepancy between the observed and expected frequencies. A lower value indicates a better fit to the expected distribution.
+
+p-value: Indicates the probability of observing the data assuming the null hypothesis (that the data follows a uniform distribution) is true. Common significance levels are 0.05 (5%) or 0.01 (1%).
+
+Interpretation:
+High p-value (greater than 0.05): Fails to reject the null hypothesis, suggesting that the random numbers are uniformly distributed.
+Low p-value (less than 0.05): Rejects the null hypothesis, indicating that the random numbers do not follow a uniform distribution.
+
+2. Poker Test
+The poker test categorizes the generated numbers into different hand types based on the frequency of digits. The results show the counts of various hand types.
+
+Hand Types:
+All Different: All digits are unique.
+One Pair: Two digits are the same, the rest are different.
+Two Pairs: Two sets of two digits are the same, the rest is different.
+Three of a Kind: Three digits are the same, the rest are different.
+Full House: Three digits are the same, and the remaining two are the same.
+Four of a Kind: Four digits are the same, one is different.
+Five of a Kind: All five digits are the same.
+
+Interpretation:
+Compare the observed counts of each hand type to the expected counts in a truly random sequence. The expected counts can be derived from probability theory for each hand type in a uniformly random sample.
+
+Distribution Test :
+    n = 100: 
+        Chi-square statistic: 5.4, p-value: 0.7981390623953614
+
+    n = 500: 
+        Chi-square statistic: 14.079999999999998, p-value: 0.11950779507674425
+    
+Poker Test :
+    Expected Results for n = 1000:
+        All Different: Probability ≈ 0.3024, Expected count ≈ 30.24
+        One Pair: Probability ≈ 0.5040, Expected count ≈ 50.40
+        Two Pairs: Probability ≈ 0.1080, Expected count ≈ 10.80
+        Three of a Kind: Probability ≈ 0.0720, Expected count ≈ 7.20
+        Full House: Probability ≈ 0.0090, Expected count ≈ 0.90
+        Four of a Kind: Probability ≈ 0.0045, Expected count ≈ 0.45
+        Five of a Kind: Probability ≈ 0.0001, Expected count ≈ 0.01
+
+    n = 100:
+        Poker hand classification results:
+            all_different: 35
+            one_pair: 48
+            two_pairs: 9
+            three_of_a_kind: 7
+            full_house: 1
+            four_of_a_kind: 0
+            five_of_a_kind: 0
+
+            Interpretation
+                All Different:
+                Observed: 35
+                Expected: 30.24
+                The observed count is slightly higher than the expected count but within a reasonable range.
+
+                One Pair:
+                Observed: 48
+                Expected: 50.40
+                The observed count is slightly lower than the expected count but within a reasonable range.
+
+                Two Pairs:
+                Observed: 9
+                Expected: 10.80
+                The observed count is slightly lower than the expected count but within a reasonable range.
+
+                Three of a Kind:
+                Observed: 7
+                Expected: 7.20
+                The observed count matches the expected count very closely.
+
+                Full House:
+                Observed: 1
+                Expected: 0.90
+                The observed count is very close to the expected count.
+
+                Four of a Kind:
+                Observed: 0
+                Expected: 0.45
+                The observed count is zero, slightly below the expected count but not unexpected given the small sample size.
+
+                Five of a Kind:
+                Observed: 0
+                Expected: 0.01
+                The observed count is zero, which is consistent with the expected count.
