@@ -51,38 +51,84 @@ Poker Test :
             four_of_a_kind: 0
             five_of_a_kind: 0
 
-            Interpretation
-                All Different:
-                Observed: 35
-                Expected: 30.24
-                The observed count is slightly higher than the expected count but within a reasonable range.
+        Interpretation:
+            All Different:
+            Observed: 35
+            Expected: 30.24
+            The observed count is slightly higher than the expected count but within a reasonable range.
 
-                One Pair:
-                Observed: 48
-                Expected: 50.40
-                The observed count is slightly lower than the expected count but within a reasonable range.
+            One Pair:
+            Observed: 48
+            Expected: 50.40
+            The observed count is slightly lower than the expected count but within a reasonable range.
 
-                Two Pairs:
-                Observed: 9
-                Expected: 10.80
-                The observed count is slightly lower than the expected count but within a reasonable range.
+            Two Pairs:
+            Observed: 9
+            Expected: 10.80
+            The observed count is slightly lower than the expected count but within a reasonable range.
 
-                Three of a Kind:
-                Observed: 7
-                Expected: 7.20
-                The observed count matches the expected count very closely.
+            Three of a Kind:
+            Observed: 7
+            Expected: 7.20
+            The observed count matches the expected count very closely.
 
-                Full House:
-                Observed: 1
-                Expected: 0.90
-                The observed count is very close to the expected count.
+            Full House:
+            Observed: 1
+            Expected: 0.90
+            The observed count is very close to the expected count.
 
-                Four of a Kind:
-                Observed: 0
-                Expected: 0.45
-                The observed count is zero, slightly below the expected count but not unexpected given the small sample size.
+            Four of a Kind:
+            Observed: 0
+            Expected: 0.45
+            The observed count is zero, slightly below the expected count but not unexpected given the small sample size.
 
-                Five of a Kind:
-                Observed: 0
-                Expected: 0.01
-                The observed count is zero, which is consistent with the expected count.
+            Five of a Kind:
+            Observed: 0
+            Expected: 0.01
+            The observed count is zero, which is consistent with the expected count.
+    
+    n = 100:
+        Poker hand classification results:
+            all_different: 104
+            one_pair: 150
+            two_pairs: 29
+            three_of_a_kind: 15
+            full_house: 1
+            four_of_a_kind: 1
+            five_of_a_kind: 0
+
+        Interpretation:
+            All Different:
+            Observed: 104
+            Expected: 90.72
+            The observed count is higher than the expected count but within a reasonable range.
+
+            One Pair:
+            Observed: 150
+            Expected: 151.20
+            The observed count is slightly lower than the expected count but within a reasonable range.
+
+            Two Pairs:
+            Observed: 29
+            Expected: 32.40
+            The observed count is slightly lower than the expected count but within a reasonable range.
+
+            Three of a Kind:
+            Observed: 15
+            Expected: 21.60
+            The observed count is lower than the expected count but within a reasonable range.
+
+            Full House:
+            Observed: 1
+            Expected: 2.70
+            The observed count is lower than the expected count but within a reasonable range.
+
+            Four of a Kind:
+            Observed: 1
+            Expected: 1.35
+            The observed count is consistent with the expected count.
+            
+            Five of a Kind:
+            Observed: 0
+            Expected: 0.03
+            The observed count is zero, which is expected due to the rarity of this hand type.
