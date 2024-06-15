@@ -56,27 +56,27 @@ def rand_gen(min, max):
     print("\nRandom sentence: ", generated_text)
 
     text_hash = gen_hash(generated_text)
-    print("SHA-256 hash: ", text_hash)
+    print("\nSHA-256 hash: ", text_hash)
 
     small_hash = text_hash % 1000000000
-    print("Shortened hash: ", small_hash)
+    print("\nShortened hash: ", small_hash)
 
     
     # atmospheric noise
     atmospheric_value = gen_atmosphere()
-    print("Atmospheric noise: ", atmospheric_value)
+    print("\nAtmospheric noise: ", atmospheric_value)
 
     xor = small_hash ^ atmospheric_value
-    print("XOR value: ", xor)
+    print("\nXOR value: ", xor)
     
     rang = max - min + 1
     final_val = (xor % rang) + min
     return final_val
 
-print("Please enter a minimum value.")
+print("\nPlease enter a minimum value.")
 min = int(input())
 
-print("Please enter a maxmimum value.")
+print("\nPlease enter a maxmimum value.")
 max = int(input())
 
-print("Your random number is : ", rand_gen(min, max), "\n")
+print("\nYour random number is : ", rand_gen(min, max), "\n")
